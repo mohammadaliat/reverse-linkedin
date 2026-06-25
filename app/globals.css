@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; overflow-x: hidden; }
+::selection { background: #a3ff12; color: #080a12; }
+.glass { @apply border border-white/10 bg-white/[0.065] backdrop-blur-2xl shadow-soft; }
+.noise:before { content:""; position:fixed; inset:0; pointer-events:none; z-index:50; opacity:.08; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); }
+.mesh { background: radial-gradient(circle at 15% 20%, rgba(255,78,205,.26), transparent 32%), radial-gradient(circle at 80% 10%, rgba(163,255,18,.18), transparent 26%), radial-gradient(circle at 50% 70%, rgba(139,92,246,.30), transparent 34%); }
+.progress { background: linear-gradient(90deg,#a3ff12,#ff4ecd,#8b5cf6); }
